@@ -1,6 +1,6 @@
 {
-  "name": "koa-router-validator",
-  "version": "0.0.1",
+  "name": "koa-router-checker",
+  "version": "1.0.5",
   "description": "a params validator for koa-router",
   "main": "index.js",
   "scripts": {
@@ -8,22 +8,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zhangjialegh/koa-router-validator.git"
+    "url": "git://github.com/zhangjialegh/koa-router-checker.git"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
     "validator",
+    "checker",
     "koa",
     "koa-router"
   ],
   "author": "zhangjiale <zjl1195185765@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhangjialegh/koa-router-validator/issues"
+    "url": "https://github.com/zhangjialegh/koa-router-checker/issues"
   },
-  "homepage": "https://github.com/zhangjialegh/koa-router-validator",
+  "homepage": "https://github.com/zhangjialegh/koa-router-checker",
   "devDependencies": {
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",

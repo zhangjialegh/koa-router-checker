@@ -18,7 +18,7 @@
     "koa",
     "koa-router"
   ],
-  "author": "zhangjiale <zjl1195185765@qq.com> (http://deadhorse.me)",
+  "author": "zhangjiale <zjl1195185765@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhangjialegh/koa-router-validator/issues"

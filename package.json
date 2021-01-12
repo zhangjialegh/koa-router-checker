@@ -1,0 +1,36 @@
+{
+  "name": "koa-router-validator",
+  "version": "0.0.1",
+  "description": "a params validator for koa-router",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zhangjialegh/koa-router-validator.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "validator",
+    "koa",
+    "koa-router"
+  ],
+  "author": "zhangjiale <zjl1195185765@qq.com> (http://deadhorse.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangjialegh/koa-router-validator/issues"
+  },
+  "homepage": "https://github.com/zhangjialegh/koa-router-validator",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

@@ -7,7 +7,7 @@ const router = new Router();
 const app = new Koa();
 app.use(bodyParser());
 
-describe("test/test.js", function () {
+describe("test/middleware.test.js", function () {
   describe("ctx.query is Array", function () {
     const server = app.listen();
     it("should id is required", function (done) {

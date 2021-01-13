@@ -28,6 +28,8 @@ router.get('/', koaRouterChecker({
   message: function(key: string) {
     ...
   },
+  // status [Number] low priority
+  status: 400,
 
  /**
   * ctx.body
@@ -58,8 +60,18 @@ router.get('/', koaRouterChecker({
         message: 'no auth'
       }
     }
+
+    ...
+
+    
   }
-}));
+}), async(ctx,next) => {
+  ...
+
+  await next()
+
+  ....
+});
 
 app.use(router.routes());
 

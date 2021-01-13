@@ -2,8 +2,9 @@
 
 /**
  * @param [Object] opts
- *   - {Array} rules default []
- */
+ *   - {Object} rule default {} required
+ *   - {String | Function} message default function(key){return `${key} is required`} optional
+ */  
 
 function isObject(o) {
   return Object.prototype.toString.call(o) === "[object Object]";
@@ -62,16 +63,16 @@ function formatRule(o) {
 function formatMessage(o, key) {
   if (isFunction(o)) {
     return o(key);
-  } else if (isString(o)) {
+  } else if (o && isString(o)) {
     return o;
   }
-  return `${key} is required`;
+  return `${key} is required`
 }
 
 module.exports = function (opts) {
-  const rule = opts.rule || [];
+  const rule = opts.rule || {};
   const msg = opts.message;
-  const defaultCode = 400;
+  const defaultCode = opts.status || 400;
   /**
    * @param [Object] rule
    * @param [String,Function] message
@@ -113,10 +114,9 @@ module.exports = function (opts) {
       if (errItem.childKey) {
         ctx.body = {
           status: errItem.status || defaultCode,
-          message: errItem.message || formatMessage(msg, errItem.childKey),
+          message: formatMessage( errItem.message || msg, errItem.childKey),
         };
       }
-
       return next();
     } else {
       throw Error(`rule must be a object`);

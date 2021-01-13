@@ -63,7 +63,7 @@ router.get('/', koaRouterChecker({
 
     ...
 
-    
+
   }
 }), async(ctx,next) => {
   ...
@@ -80,9 +80,8 @@ app.listen(5000);
 
 ```js
 // ctx.body
-
+ctx.status = 400  //  default 400, the status of define
 ctx.body = {
-  status: 400 //  default 400，the status of define
   message: 'xx is required' // default key is required， the message of define
 }
 

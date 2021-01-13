@@ -72,7 +72,7 @@ function formatMessage(o, key) {
 module.exports = function (opts) {
   const rule = opts.rule || {};
   const msg = opts.message;
-  const defaultCode = opts.status || 400;
+  const errCode = opts.status || 400;
   /**
    * @param [Object] rule
    * @param [String,Function] message
@@ -112,8 +112,8 @@ module.exports = function (opts) {
         }
       }
       if (errItem.childKey) {
+        ctx.status = errItem.status || errCode
         ctx.body = {
-          status: errItem.status || defaultCode,
           message: formatMessage( errItem.message || msg, errItem.childKey),
         };
       }
